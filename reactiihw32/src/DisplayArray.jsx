@@ -1,13 +1,13 @@
 import React from "react";
+import './DisplayArray.css'
 
 export const DisplayArray = ({ animalList }) => {
-  let emojis = ["🐶", "🐱", "🐥", "🐄", "🐑", "🐎"];
-  let animals = animalList.map( animal => emojis.map( emoji => <div>{emoji + animal}</div>));
+  let animals = animalList.map( animal => <p className='animal'>{animal}</p>);
   
 
   return (
-    <div id="animal">
-      <p>{animals}</p>
+    <div id="animals">
+      <ul>{animals}</ul>
     </div>
   );
 };
